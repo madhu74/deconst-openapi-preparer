@@ -49,7 +49,7 @@ class CommonTestCase(unittest.TestCase):
         deconst_path = path.join(os.getcwd(), 'tests', 'src', '_deconst.json')
         with open(deconst_path, 'r') as deconst_file:
             deconst_config = json.load(deconst_file)
-        expected_content_id = 'https://github.com/deconst/fake-repo/docname_test'
+        expected_content_id = 'https://github.com/deconst/fake-repo/openapi.json'
         actual_content_id = derive_content_id(
             deconst_config, "docname_test", test=True)
         self.assertEqual(actual_content_id, expected_content_id)

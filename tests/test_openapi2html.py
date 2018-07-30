@@ -3,7 +3,7 @@
 '''
 test_raml2html
 ----------------------------------
-Tests for `raml2html` module.
+Tests for `openapi2html` module.
 '''
 
 import unittest
@@ -21,23 +21,23 @@ class OPENAPI2HTMLTestCase(unittest.TestCase):
     Tests for the OPENAPI2HTML method
     '''
 
-    def test_raml2html_is_html(self):
+    def test_openapi2html_is_html(self):
         '''
         Is the output of openapi2html actually HTML?
         '''
-        test_raml = path.join(os.getcwd(), 'tests', 'src', 'openapi.json')
+        test_openapi = path.join(os.getcwd(), 'tests', 'src', 'openapi.json')
         output_file = path.join(os.getcwd(), 'tests',
-                                'dest', 'test_is_html', 'index.html')
-        self.assertIn('<html>', openapi2html(test_raml, output_file))
+                                'dest', 'test_is_html')
+        self.assertIn('<html>', openapi2html(test_openapi, output_file))
 
-    def test_raml2html_without_raml(self):
+    def test_openapi2html_without_json(self):
         '''
-        Does non-RAML input fail?
+        Does non-JSON input fail?
         '''
-        test_not_raml = path.join(os.getcwd(), 'tests', 'src', 'tester.txt')
+        test_not_openapi = path.join(os.getcwd(), 'tests', 'src', 'tester.txt')
         output_file = path.join(os.getcwd(), 'tests',
-                                'dest', 'test_isnt_html','index.html')
-        self.assertRaises(TypeError, openapi2html, [test_not_raml, output_file])
+                                'dest', 'test_isnt_html')
+        self.assertRaises(TypeError, openapi2html, [test_not_openapi, output_file])
 
 
 if __name__ == '__main__':
