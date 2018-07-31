@@ -29,8 +29,8 @@ setup(
     description="Build OPENAPI-based documentation to JSON and jam it in the cloud",
     long_description=long_description,
     # Author details
-    author="Laura Santamaria",
-    author_email='laura.santamaria@rackspace.com',
+    author="Laura Santamaria, Madhusudan Sridharan",
+    author_email='laura.santamaria@rackspace.com, madhu.sridharan@rackspace.com',
     # The project's main homepage.
     url='https://github.com/nimbinatus/deconst-raml-preparer',
     # You can just specify the packages manually here if your project is
