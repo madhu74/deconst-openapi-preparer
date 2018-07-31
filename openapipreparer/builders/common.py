@@ -13,6 +13,8 @@ import json
 # import glob
 from os import path
 from pathlib import Path
+import functools
+import urllib.parse
 
 from openapipreparer.config import Configuration
 from openapipreparer import DECONST_FILE
@@ -52,8 +54,20 @@ def derive_content_id(deconst_config, docname, test=False):
         content_id_suffix = docname
 
     if test == True:
-        content_id = path.join(
-            deconst_config['contentIDBase'], content_id_suffix)
+        folders = []
+        while 1:
+            content_id_suffix, folder = os.path.split(content_id_suffix)
+            if folder != "":
+                folders.append(folder)
+            else:
+                if content_id_suffix != "":
+                    folders.append(content_id_suffix)
+                break
+        folders.reverse()
+        folders = folders[2:]
+        folders.append("openapi.json")
+        content_id_suffix = functools.reduce(lambda a,b : a+"/"+b, folders)
+        content_id = urllib.parse.urljoin(deconst_config['contentIDBase'], content_id_suffix)
     else:
         content_id = path.join(
             deconst_config.content_id_base, content_id_suffix)

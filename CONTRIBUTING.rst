@@ -5,6 +5,11 @@ Contributing
 Contributions are welcome, and they are greatly appreciated! Every
 little bit helps, and credit will always be given.
 
+This repo is developed based on the repo cloned from
+[raml-preparer](https://github.com/nimbinatus/deconst-raml-preparer).
+Thank you [Laura Santamaria](https://github.com/nimbinatus), for helping to develope
+and create this repo.
+
 You can contribute in many ways:
 
 Types of Contributions
@@ -13,7 +18,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/nimbinatus/deconst-raml-preparer/issues.
+Report bugs at https://github.com/madhu74/deconst-openapi-preparer/issues.
 
 If you are reporting a bug, please include:
 
@@ -44,7 +49,7 @@ Submit Feedback
 ~~~~~~~~~~~~~~~
 
 The best way to send feedback is to file an issue at
-https://github.com/nimbinatus/deconst-raml-preparer/issues.
+https://github.com/madhu74/deconst-openapi-preparer/issues.
 
 If you are proposing a feature:
 
@@ -56,20 +61,20 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `deconst-raml-preparer` for local
+Ready to contribute? Here's how to set up `deconst-openapi-preparer` for local
 development.
 
-1. Fork the `/nimbinatus/deconst-raml-preparer` repo on GitHub.
+1. Fork the `/madhu74/deconst-openapi-preparer` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/deconst-raml-preparer.git
+    $ git clone git@github.com:your_name_here/deconst-openapi-preparer.git
 
 3. Install your local copy into a virtualenv. Assuming you have
    virtualenvwrapper installed, this is how you set up your fork for local
    development::
 
-    $ mkvirtualenv deconstraml
-    $ cd deconstraml/
+    $ mkvirtualenv deconstopenapi
+    $ cd deconstopenapi/
     $ python setup.py develop
 
 4. Create a branch for local development::
@@ -104,12 +109,10 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 3.4. Check Travis CI (coming up)
-   and make sure that the tests pass for all supported Python versions.
 
 Tips
 ----
 
 To run a subset of tests (not functional yet)::
 
-    $ python -m unittest tests.test_deconstraml
+    $ python -m unittest tests.test_deconstopenapi

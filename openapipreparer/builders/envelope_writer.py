@@ -128,7 +128,7 @@ class Envelope_OPENAPI:
             self.meta = self.deconst_config.meta.copy()
         self.meta.update(self.per_page_meta)
 
-    def _populate_git(self, test=False):
+    def _populate_git(self, test=False, path_string=None):
         '''
         Set the github_edit_url property within "meta".
         '''
@@ -139,8 +139,8 @@ class Envelope_OPENAPI:
                 git_root_path = os.getcwd()
             for (dirpath, dirnames, filenames) in os.walk(git_root_path):
                 for filename in filenames:
-                    if filename.endswith(str(self.docname)):
-                        for dirname in dirnames:
+                    for dirname in dirnames:
+                        if str(dirname) == "small_test":
                             actual_path = str(
                                 Path(dirname).parents[0])[:-2]
                             full_path = os.path.join(
