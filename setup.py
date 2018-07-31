@@ -32,7 +32,7 @@ setup(
     author="Laura Santamaria, Madhusudan Sridharan",
     author_email='laura.santamaria@rackspace.com, madhu.sridharan@rackspace.com',
     # The project's main homepage.
-    url='https://github.com/nimbinatus/deconst-raml-preparer',
+    url='https://github.com/madhu74/deconst-openapi-preparer',
     # You can just specify the packages manually here if your project is
     # simple. Or you can use find_packages().
     packages=[
